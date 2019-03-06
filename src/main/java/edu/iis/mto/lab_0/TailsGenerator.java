@@ -9,7 +9,11 @@ public class TailsGenerator {
         if(value == null)
             return new ArrayList<>();
 
-        return new ArrayList<>(value.length());
+        ArrayList<String> result = new ArrayList<>();
+        for(int i=0; i<value.length()+1; i++)
+            result.add(value.substring(i));
+
+        return result;
     }
 
 }
